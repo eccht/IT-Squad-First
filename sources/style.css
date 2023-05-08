@@ -15,8 +15,9 @@ body {
     body header .navigation-list .nav-link {
       padding: 10px 20px;
       background-color: #f5f5f5;
-      text-transform: uppercase; }
-    body header .navigation-list * + * {
+      text-transform: uppercase;
+      color: #551A8B; }
+    body header .navigation-list > * + * {
       margin-left: 20px; }
   body .slider {
     width: 100vw;
@@ -30,7 +31,10 @@ body {
       top: calc(50% - 15px);
       width: 30px;
       height: 30px;
-      background-color: #f5f5f5; }
+      background: none;
+      border: none; }
+      body .slider [class*="arrow-"] img {
+        height: 150%; }
     body .slider .arrow-prev {
       left: 50px; }
     body .slider .arrow-next {
@@ -42,6 +46,35 @@ body {
     body .slider .active {
       display: flex;
       justify-content: center; }
+  body .calc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    body .calc > * + * {
+      margin-top: 20px; }
+    body .calc input {
+      border: 1px solid #551A8B;
+      font-size: 18px;
+      line-height: 1.5;
+      padding: 5px 5px 5px 10px; }
+    body .calc [name="operation"] {
+      display: none; }
+    body .calc label {
+      padding: 10px 20px;
+      background-color: #f5f5f5; }
+    body .calc [name="operation"]:checked + label {
+      border: 1px solid #551A8B; }
+    body .calc [type="submit"] {
+      background-color: #551A8B;
+      color: white;
+      text-transform: uppercase;
+      padding: 10px 20px 7px 20px;
+      font-size: 16px;
+      border: none; }
+  body .answer {
+    text-align: center;
+    margin-top: 40px; }
   body .container {
     max-width: 1000px;
     margin-left: auto;

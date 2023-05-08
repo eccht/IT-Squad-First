@@ -19,10 +19,32 @@
         </div>
     </header>
     <main>
+        <div class="container">
+            <form class="calc">
+                <input id="num1" placeholder="144" />
+
+                <div id="operator_btns">
+                    <input type="radio" id="plus" name="operation" value="+">
+                    <label for="plus">+</label>
+                    <input type="radio" id="minus" name="operation" value="-">
+                    <label for="minus">-</label>
+                    <input type="radio" id="multiplication" name="operation" value="*">
+                    <label for="multiplication">*</label>
+                    <input type="radio" id="divide" name="operation" value=":">
+                    <label for="divide">:</label>
+                </div>
+
+                <input id="num2" placeholder="512" />
+
+                <button type="submit">Посчитать</button>
+            </form>
+            <p class="answer"></p>
+        </div>
     </main>
     <footer>
 
     </footer>
-    <script src="scripts\script.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/calc.js"></script>
 </body>
 </html>
