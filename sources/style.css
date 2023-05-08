@@ -2,29 +2,34 @@
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
-  overflow: hidden;
-  position: relative; }
-  body header .navigation-list {
-    width: 100%;
-    height: 80px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none; }
-    body header .navigation-list .nav-link {
-      padding: 10px 20px;
-      background-color: #f5f5f5;
-      text-transform: uppercase;
-      color: #551A8B; }
-    body header .navigation-list > * + * {
-      margin-left: 20px; }
+  position: relative;
+  box-sizing: border-box; }
+  body header {
+    border-bottom: 2px solid #f5f5f5; }
+    body header .navigation-list {
+      width: 100%;
+      height: 80px;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style-type: none; }
+      body header .navigation-list .nav-link {
+        padding: 10px 20px;
+        background-color: #f5f5f5;
+        text-transform: uppercase;
+        color: #551A8B; }
+      body header .navigation-list > * + * {
+        margin-left: 20px; }
+  body main {
+    min-height: calc(100vh - 280px); }
   body .slider {
-    width: 100vw;
+    width: 100%;
     height: calc(100vh - 80px);
     min-height: 300px;
     max-height: 1440px;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     body .slider [class*="arrow-"] {
       cursor: pointer;
       position: absolute;
@@ -47,6 +52,7 @@ body {
       display: flex;
       justify-content: center; }
   body .calc {
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,6 +81,34 @@ body {
   body .answer {
     text-align: center;
     margin-top: 40px; }
+  body .footer-content {
+    display: grid;
+    height: 200px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
+    gap: 2px;
+    padding: 2px;
+    background-color: #f5f5f5; }
+    body .footer-content > * {
+      background-color: white;
+      margin: 0;
+      padding: 20px; }
+    body .footer-content .created-by {
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 1;
+      grid-column-end: 2; }
+    body .footer-content .other-info {
+      grid-row-start: 2;
+      grid-row-end: 3;
+      grid-column-start: 1;
+      grid-column-end: 2; }
+    body .footer-content .links {
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 2;
+      grid-column-end: 3; }
   body .container {
     max-width: 1000px;
     margin-left: auto;
